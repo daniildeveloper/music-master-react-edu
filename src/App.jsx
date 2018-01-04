@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
+import { FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
+
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className="App">
-        <div className="AppTitle">Music Master</div>
-        <div>
-          <input type="text" placeholder="search an artist"/>
-          <button>Button</button>
-        </div>
+        <div className="App-title">Music Master</div>
+        <FormGroup>
+          <InputGroup> 
+            <FormControl
+              type="text"
+              placeholder="Search for an artist"
+            />
+            <InputGroup.Addon>
+              <Glyphicon glyph="search"></Glyphicon>
+            </InputGroup.Addon>
+          </InputGroup>
+          
+        </FormGroup>
 
         <div className="Profile">
           <div>Artist Name</div>
